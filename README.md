@@ -1,2 +1,2 @@
-# AMD_hackathon_Cognivia
-Project Cognivia
+# AMD_hackathon_CodeLingua
+Project CodeLingua
