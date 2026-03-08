@@ -9,8 +9,9 @@ conda activate code-lingua
 pip install -r requirements.txt
 ```
 
-- Cd into frontend and run
+- Cd into frontend and run the frontend
 ```
 cd frontend
+npm install
 npm run dev
 ```
