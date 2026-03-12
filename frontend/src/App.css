@@ -3,6 +3,8 @@
 #root {
   width: 100%;
   min-height: 100vh;
+  background-color: #f8fafc;
+  color: #1e293b;
 }
 
 /* Navbar */
@@ -12,21 +14,23 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffffff;
-  color: rgb(255, 255, 255);
-  box-shadow: 0 5px 5px rgba(19, 20, 20, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  z-index: 1000;
 }
 
 .navbar h1{
-  font-size: 26px;
-  font-weight: 550;
+  font-size: 24px;
+  font-weight: 700;
   text-align: left;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  padding: 1rem 2rem;
   margin: 0;
-  color: #5C07B1
+  background: linear-gradient(135deg, #1975f5, #7c3aed);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-container {
@@ -44,17 +48,63 @@
 }
 
 .markdown-card {
-  max-width: 700px;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #000000;
-  background: #CCE8FF;
-  box-shadow: 3px 3px 6px 3px orchid;
-  line-height: 1.6;
+  max-width: 800px;
+  width: 90%;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #ffffff;
+  box-shadow: 
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  line-height: 1.8;
+  margin: 2rem auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  /* left aligned */
-  margin-left: auto;
-  margin-right: auto;
+.markdown-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.markdown-card pre {
+  border-radius: 8px !important;
+  margin: 1.5rem 0 !important;
+}
+
+.markdown-card code {
+  font-family: "Google Sans Code", monospace !important;
+  font-size: 0.9em;
+  background: #f1f5f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.markdown-card pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-card h1, .markdown-card h2, .markdown-card h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0f172a;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.markdown-card p {
+  margin-bottom: 1.2rem;
+  text-align: left;
+  color: #334155;
+}
+
+.markdown-card ul, .markdown-card ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: left;
 }
 /*===================================================*/
 
@@ -107,14 +157,16 @@
 
 /* Home / landing layout */
 .home-main {
-  min-height: calc(100vh - 72px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;     
-  text-align: center;
-  padding: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  padding: 100px 2rem 4rem; /* Top padding fix for navbar */
   box-sizing: border-box;
+  background: radial-gradient(circle at top right, rgba(25, 117, 245, 0.05), transparent),
+              radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.05), transparent);
 }
 
 .input-box-container {
@@ -142,7 +194,8 @@
 
 .input-box-container form input:focus {
   outline: none;
-  box-shadow: 2px 2px 2px 0px #0000ff;
+  box-shadow: 0 0 0 3px rgba(25, 117, 245, 0.2);
+  border-color: #1975f5;
 }
 
 
