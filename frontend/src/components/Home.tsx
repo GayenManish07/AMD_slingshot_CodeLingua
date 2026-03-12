@@ -5,7 +5,7 @@ function Home() {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/empty");
+    navigate("/question");
   };
 
   return (

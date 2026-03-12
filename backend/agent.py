@@ -112,7 +112,8 @@ def workflow(topic: str) -> str:
     """Simple workflow that generates an leetcode question with an LLM."""
     return compose_question(topic).result()
 
-# Execute the workflow
-config = {"configurable": {"thread_id": str(uuid.uuid4())}}
-result = workflow.invoke("stack", config=config)
-print(result[0]['text'])
+if __name__ == "__main__":
+    # Execute the workflow
+    config = {"configurable": {"thread_id": str(uuid.uuid4())}}
+    result = workflow.invoke("stack", config=config)
+    print(result[0]['text'])

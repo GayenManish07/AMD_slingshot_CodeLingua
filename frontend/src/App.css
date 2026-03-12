@@ -43,6 +43,21 @@
   margin-left: auto; 
 }
 
+.markdown-card {
+  max-width: 700px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background: #CCE8FF;
+  box-shadow: 3px 3px 6px 3px orchid;
+  line-height: 1.6;
+
+  /* left aligned */
+  margin-left: auto;
+  margin-right: auto;
+}
+/*===================================================*/
+
 .study-navbar {
   position: sticky;
   z-index: 1000;
